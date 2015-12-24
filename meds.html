@@ -1,0 +1,33 @@
+---
+title: "Medicinal"
+permalink: "/meds/"
+layout: page
+header: "Top Headache Drugs"
+---
+{% assign groups = site.remedies | group_by: "category" %}
+
+    {% for group in groups %}
+
+        {% if group.name == 'med' %}
+
+          {% assign remedies = group.items | sort: "order" %}
+
+          {% for remedy in remedies %}
+
+            <a href="{{ remedy.url }}"><h2>{{ remedy.title }}</h2></a>
+
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_tracking_id = "headache_xyz-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "a944d7bd9dc65b531d0ac0b8d479df65";
+amzn_assoc_asins = "B0006SW71G,B001LFFPT4,B009VQT53M,B002UFRJIY";
+amzn_assoc_title = "Headache.xyz top picks";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>

@@ -1,0 +1,34 @@
+---
+title: "Natural"
+permalink: "/natural/"
+layout: page
+header: "Top Natural Headache Remedies"
+---
+
+{% assign groups = site.remedies | group_by: "category" %}
+
+    {% for group in groups %}
+
+        {% if group.name == 'natural' %}
+
+          {% assign remedies = group.items | sort: "order" %}
+
+          {% for remedy in remedies %}
+
+            <a href="{{ remedy.url }}"><h2>{{ remedy.title }}</h2></a>
+
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_tracking_id = "headache_xyz-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "a46314575fd2d1d990a8c7fbad936b84";
+amzn_assoc_asins = "B00GNHAFNG,B014U0PPUK,B0081S5H0G,B00S550H2I,B00I9L7G8Q,B010OE8KQM";
+amzn_assoc_title = "Headache.xyz top picks";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
