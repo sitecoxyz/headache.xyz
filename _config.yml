@@ -35,7 +35,7 @@ paginate_path: "/page:num/"
 disqus_shortname:
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-71393500-4"
 
 
 # Social icons and sharing options
